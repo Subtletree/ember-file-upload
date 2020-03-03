@@ -26,6 +26,8 @@ export default Ember.Service.extend({
     accessed by name via the `find` method.
    */
   init() {
+    this._super(...arguments);
+
     set(this, 'queues', Ember.A());
     set(this, 'files', Ember.A());
   },
